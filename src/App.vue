@@ -1,6 +1,6 @@
 <template>
   <div>  
-    <h1>{{ title }}</h1>
+    <h1>Clicked {{ number }}</h1>
     <button @click="iAmClicked()">Click me!</button>
   </div>
 </template>
@@ -8,11 +8,12 @@
 <script>
     export default {
         data() {
-            return {title: 'Not clicked yet'}
+            return {title: 'Not clicked yet' , number: 0}
         },
         methods: {
             iAmClicked() {
-                this.title = 'Clicked %d% times';
+                this.title = 'Clicked times.';
+                this.number++;
             }
         }
     };
